@@ -7,7 +7,7 @@ const client = new Client({
 
 client.config = CONFIG;
 
-const env = 'dev';
+const env = 'prod';
 
 if (env === 'dev') {
   const SECRET = require("../secret");
@@ -24,7 +24,18 @@ if (env === 'dev') {
   client.config.MASTER_GROUP_ID = SECRET.MASTER_GROUP_ID;
   client.config.CHANNEL_TO_POST_NAME = SECRET.CHANNEL_TO_POST_NAME;
 } else {
-  console.log('');
+  client.config.TOKEN = process.env.TOKEN;
+  client.config.PREFIX = process.env.PREFIX;
+  client.config.DREADNOUGHT_NAME = process.env.DREADNOUGHT_NAME;
+  client.config.HASH = process.env.HASH;
+
+  client.config.HISTORY_MESSAGE_ID = process.env.HISTORY_MESSAGE_ID;
+  client.config.CHALLENGER_MESSAGE_ID = process.env.CHALLENGER_MESSAGE_ID;
+  client.config.VICTORY_HIGH_SCORE_MESSAGE_ID = process.env.VICTORY_HIGH_SCORE_MESSAGE_ID;
+
+  client.config.BOT_ID = process.env.BOT_ID;
+  client.config.MASTER_GROUP_ID = process.env.MASTER_GROUP_ID;
+  client.config.CHANNEL_TO_POST_NAME = process.env.CHANNEL_TO_POST_NAME;
 }
 
 // client.on('ready', () => require('./events/ready.event.js')(client));
