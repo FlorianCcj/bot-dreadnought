@@ -9,4 +9,4 @@ exports.VICTORY_HIGH_SCORE_MESSAGE_ID = '697814061844398120';
 
 exports.BOT_ID = '697802383899623479';
 exports.MASTER_GROUP_ID = '697531349250080798';
-exports.CHANNEL_TO_POST_NAME = 'les-grandes-croniques';
+exports.CHANNEL_TO_POST_NAME = 'les-grandes-chroniques';

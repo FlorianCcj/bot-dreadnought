@@ -5,6 +5,7 @@ const master = require('../commands/master.command');
 const set = require('../commands/set.command');
 
 module.exports = async (client, msg) => {
+  console.log(msg.content);
   const { config } = client;
 
   const channel_to_post = msg.client.channels.cache.find(c => c.name === config.CHANNEL_TO_POST_NAME);
