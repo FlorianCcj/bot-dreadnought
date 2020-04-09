@@ -1,0 +1,12 @@
+{
+	"extends": "aqua/node",
+	"rules": {
+		"indent": ["error", 2],
+		"semi-style": "off",
+		"prefer-template": "off",
+		"no-implicit-coercion": "off",
+		"dot-notation": "off",
+		"operator-linebreak": "off"
+	}
+}
+
