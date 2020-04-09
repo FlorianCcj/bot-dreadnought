@@ -14,7 +14,7 @@
   },
   "scripts": {
     "serve": "$(npm bin)/nodemon src/main.js",
-    "start": "node src/main.js",
+    "start": "echo \"Pas de web, heroku de malheur\"",
     "lint": "$(npm bin)/eslint src/**/*",
     "db": "docker run -d --network host --name mongo -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret -p 27017:27017 mongo",
     "test": "echo \"Error: no test specified\" && exit 1"
