@@ -30,7 +30,7 @@ exports.COMMANDS_PHRASES = {
 };
 exports.RETURN_MESSAGE = {
   add_challenge_list: 'Tu as ete ajoute a la liste des challengers',
-  already_in_challenge_list: 'Tu as ete retire de la liste des challengers',
+  already_in_challenge_list: 'Tu es deja dans la liste des challengeurs va te battre plutot',
   dreadnought_lose: 'Un nouveau maitre est dans la place',
   dreadnought_lose_try_annouced: 'On a un peu de pitier, ce n est pas a toi d annoncer ta defaite',
   dreadnought_try_challenge: 'Tu es deja le Maitre, tu vas pas en plus etre le challenger',
