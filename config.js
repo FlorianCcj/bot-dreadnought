@@ -30,12 +30,12 @@ exports.COMMANDS_PHRASES = {
   dreadnought_lose_phrase: 'Je suis votre nouveau maitre gloire a moi'
 };
 exports.RETURN_MESSAGE = {
-  add_challenge_list: 'Tu as ete ajoute a la liste des challengers',
+  add_challenge_list: 'Tu as ete ajoute a la liste des challengers (pense voir avec le Grand Maitre pour organiser la partie)',
   already_in_challenge_list: 'Tu es deja dans la liste des challengeurs va te battre plutot',
-  dreadnought_lose: 'Un nouveau maitre est dans la place',
+  dreadnought_lose: 'Un nouveau maitre est dans la place (pense a ajouter le sgf)',
   dreadnought_lose_try_annouced: 'On a un peu de pitier, ce n est pas a toi d annoncer ta defaite',
   dreadnought_try_challenge: 'Tu es deja le Maitre, tu vas pas en plus etre le challenger',
-  dreadnought_win: 'Qui vaincra le grand maitre ?',
+  dreadnought_win: 'Qui vaincra le grand maitre ? (pense a ajouter le sgf)',
   dreadnought_win_but_against_who: 'Merci de me prevenir que tu as gagner, mais contre qui ?',
   not_be_challenger: 'Tu n\'etais pas challenger, tu crois me tricker oh !',
   not_be_dreadnought: 'Tu n es pas le grand maitre tu n as pas le droit a cette commande',
