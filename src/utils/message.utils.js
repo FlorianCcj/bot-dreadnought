@@ -1,4 +1,4 @@
-function create_init_message(channel, init_message_begining, bot_id, config) {
+function create_init_message(channel, config) {
   channel.messages.fetch()
     .then(msgs => {
       const bot_msgs = msgs.array().filter(m => m.author.id === config.BOT_ID);

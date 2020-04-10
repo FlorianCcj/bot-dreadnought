@@ -3,7 +3,7 @@ const victory = require('../utils/victory.utils');
 
 function init1(channel_to_post, config) {
   for (let i_message = 0, last_message = config.MESSAGE_NUMBER ; i_message < last_message; i_message++) {
-    message.init(channel_to_post, config.MESSAGE_INIT.init, config.BOT_ID);
+    message.init(channel_to_post, config);
   }
 }
 
