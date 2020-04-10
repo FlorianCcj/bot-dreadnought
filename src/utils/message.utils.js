@@ -1,12 +1,12 @@
-function create_init_message(channel, init_message_begining, bot_id) {
+function create_init_message(channel, init_message_begining, bot_id, config) {
   channel.messages.fetch()
     .then(msgs => {
-      const bot_msgs = msgs.array().filter(m => m.author.id === bot_id);
-      if (bot_msgs.length < 4) {
+      const bot_msgs = msgs.array().filter(m => m.author.id === config.BOT_ID);
+      if (bot_msgs.length < config.MESSAGE_NUMBER) {
         channel.send('hey')
           .then(new_msg => {
             setTimeout(() => {
-              new_msg.edit(`${init_message_begining}: ${new_msg.id}`);
+              new_msg.edit(`${config.MESSAGE_INIT.init}: ${new_msg.id}`);
             }, 1000);
           }).catch(err => console.log(err))
         ;

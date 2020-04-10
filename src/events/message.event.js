@@ -17,7 +17,7 @@ module.exports = async (client, msg) => {
   // init bot
   if (msg.content.startsWith(`${config.PREFIX} init 1`)) {
     // create post if there is no bot post
-    init.init1(channel_to_post, config.MESSAGE_INIT.init, config.BOT_ID);
+    init.init1(channel_to_post, config);
     print_help = false;
   } else if (msg.content.startsWith(`${config.PREFIX} init 2`)) {
     init.init2(channel_to_post, config);

@@ -1,4 +1,5 @@
 
+exports.MESSAGE_NUMBER = 3;
 exports.MESSAGE_INIT = {
   init: 'Hey I need this id',
   history: ''
