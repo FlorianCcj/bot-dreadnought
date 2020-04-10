@@ -1,12 +1,12 @@
-exports.TOKEN = 'asasa';
-exports.PREFIX = 'ccj';
-exports.HASH = 1991091800;
+exports.TOKEN = 'asasas';
+exports.PREFIX = 'aaa';
+exports.HASH = 0;
 exports.DREADNOUGHT_NAME = 'Maitre';
 
-exports.HISTORY_MESSAGE_ID = '697814060225265694';
-exports.CHALLENGER_MESSAGE_ID = '697814060892160062';
-exports.VICTORY_HIGH_SCORE_MESSAGE_ID = '697814061844398120';
+exports.HISTORY_MESSAGE_ID = '';
+exports.CHALLENGER_MESSAGE_ID = '';
+exports.VICTORY_HIGH_SCORE_MESSAGE_ID = '';
 
-exports.BOT_ID = '697802383899623479';
-exports.MASTER_GROUP_ID = '697531349250080798';
-exports.CHANNEL_TO_POST_NAME = 'les-grandes-chroniques';
+exports.BOT_ID = '';
+exports.MASTER_GROUP_ID = '';
+exports.CHANNEL_TO_POST_NAME = '';

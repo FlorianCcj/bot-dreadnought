@@ -17,12 +17,19 @@ module.exports = async (client, msg) => {
   // init bot
   if (msg.content.startsWith(`${config.PREFIX} init 1`)) {
     // create post if there is no bot post
+    await utils.check_needed(msg, client, config, true);
     init.init1(channel_to_post, config);
     print_help = false;
   } else if (msg.content.startsWith(`${config.PREFIX} init 2`)) {
+    if (await utils.check_needed(msg, client, config)) {
+      return;
+    }
     init.init2(channel_to_post, config);
     print_help = false;
   } else if (msg.content.startsWith(`${config.PREFIX} set`)) {
+    if (await utils.check_needed(msg, client, config)) {
+      return;
+    }
     set.set(msg, config);
     print_help = false;
   }
@@ -32,6 +39,9 @@ module.exports = async (client, msg) => {
     utils.slug(msg.content).includes(utils.slug(config.COMMANDS_PHRASES.challenge_phrase))
     || msg.content.startsWith(`${config.PREFIX} fight`)
   ) {
+    if (await utils.check_needed(msg, client, config)) {
+      return;
+    }
     challenge.launch(msg, channel_to_post, config.CHALLENGER_MESSAGE_ID, config);
     print_help = false;
   }
@@ -41,6 +51,9 @@ module.exports = async (client, msg) => {
     utils.slug(msg.content).includes(utils.slug(config.COMMANDS_PHRASES.resign_phrase))
     || msg.content.startsWith(`${config.PREFIX} resign`)
   ) {
+    if (await utils.check_needed(msg, client, config)) {
+      return;
+    }
     challenge.resign(
       channel_to_post,
       msg,
@@ -57,6 +70,9 @@ module.exports = async (client, msg) => {
     utils.slug(msg.content).includes(utils.slug(config.COMMANDS_PHRASES.dreadnought_win_phrase))
     || msg.content.startsWith(`${config.PREFIX} win`)
   ) {
+    if (await utils.check_needed(msg, client, config)) {
+      return;
+    }
     master.win(msg, channel_to_post, config);
     print_help = false;
   }
@@ -66,6 +82,9 @@ module.exports = async (client, msg) => {
     utils.slug(msg.content).includes(utils.slug(config.COMMANDS_PHRASES.dreadnought_lose_phrase))
     || msg.content.startsWith(`${config.PREFIX} lose`)
   ) {
+    if (await utils.check_needed(msg, client, config)) {
+      return;
+    }
     master.lose(msg, channel_to_post, config);
     print_help = false;
   }
@@ -81,6 +100,7 @@ module.exports = async (client, msg) => {
     || msg.content.startsWith(`${config.PREFIX} --help`)
   ) {
     help.print_help(msg, config);
+    await utils.check_needed(msg, client, config);
   }
 
   // @Todo high score during
